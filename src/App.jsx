@@ -7,6 +7,7 @@ import Goals  from "./Pages/Goals";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Navbar from "./Components/Navbar";
+import Wrapper from "./Components/Wrapper";
 
 function App() {
   return (
@@ -14,11 +15,11 @@ function App() {
       <Navbar /> 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Dashboard" element={<Dashboard />} />
-         <Route path="/Goals" element={<Goals />} /> 
+         <Route path="/Dashboard" element={<Wrapper><Dashboard /></Wrapper>} />
+         <Route path="/Goals" element={<Wrapper><Goals /></Wrapper>} /> 
          <Route path="/Login" element={<Login />} />
          <Route path="/Register"element={<Register />} />
-        <Route path="/Tasks" element={<Tasks />} />
+        <Route path="/Tasks" element={<Wrapper><Tasks /></Wrapper>} />
       </Routes>
     </div>
   );
